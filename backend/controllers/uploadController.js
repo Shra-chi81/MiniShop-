@@ -6,8 +6,8 @@ const uploadImages = asyncHandler(async (req, res) => {
     throw new Error('No files uploaded');
   }
 
-  const baseUrl = `${req.protocol}://${req.get('host')}`;
-  const urls = req.files.map((file) => `${baseUrl}/uploads/${file.filename}`);
+   // Cloudinary returns the URL in file.path
+  const urls = req.files.map((file) => file.path);
 
   res.status(201).json({ success: true, urls });
 });
