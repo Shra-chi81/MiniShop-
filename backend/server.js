@@ -16,6 +16,7 @@ const orderRoutes = require('./routes/orderRoutes');
 connectDB();
 
 const app = express();
+app.set('trust proxy', 1);
 const path = require('path');
 
 
