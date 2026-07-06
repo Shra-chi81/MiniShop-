@@ -6,6 +6,7 @@ import App from './App';
 import { store } from './store/store';
 import { ThemeProvider } from './store/ThemeContext';
 import './index.css';
+import { ToastContainer } from './components/Toast';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -13,6 +14,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <ThemeProvider>
         <BrowserRouter>
           <App />
+          <ToastContainer />
         </BrowserRouter>
       </ThemeProvider>
     </Provider>
